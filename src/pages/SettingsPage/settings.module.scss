@@ -1,0 +1,126 @@
+.wrapper{
+    box-sizing: border-box;
+    margin: 50px 0px;
+}
+
+.container{
+    max-width: 1330px;
+    padding: 0px 15px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.controls{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.addBtn{
+    padding: 12px 15px 10px 13px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff4874;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #ff4874;
+    color: #fff;
+    transition: all .2s linear;
+    cursor: pointer;
+    user-select:none;
+    span{
+        font-size: 35px;
+        margin-top: -8px;
+        margin-right: 5px;
+        font-weight: 100;
+        line-height: 20px;
+    }
+    &:hover,&:active,&:focus{
+        background: #fff;
+        color:#ff4874;
+        box-shadow: 0px 0px 5px #ff4874;
+
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    .modal__overlay{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba( #000000, 0.8);
+        z-index: 1;
+    }
+    .modal__container{
+        max-width: 550px;
+        width: 550px;
+        margin: 0 auto;
+        padding: 50px;
+        background: #fff;
+        text-align: center;
+        border: 1px solid #f8fdff;
+        box-shadow: 0px 0px 6px #f8fdff;
+        z-index: 2;
+        .modal__title{
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .modal__form{
+            .modal__input{
+                box-sizing: border-box;
+                padding: 0px 10px;
+                margin-top: 15px;
+            }
+            .modal__buttons{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+                .modal__add_btn{
+                    background: #ff4874;
+                    cursor: pointer;
+                    color: #fff;
+                    border: 1px solid #ff4874;
+                    padding: 10px 20px;
+                    font-size: 17px;
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 5px #ff4874;
+                    transition: all .2s linear;
+                    &:hover{
+                        background: transparent;
+                        color: #ff4874;
+                    }
+                }
+                .modal__rem_btn{
+                    background: #aaa;
+                    cursor: pointer;
+                    color: #fff;
+                    border: 1px solid #bbb;
+                    padding: 10px 20px;
+                    font-size: 17px;
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 5px #bbb;
+                    transition: all .2s linear;
+                    &:hover{
+                        background: transparent;
+                        color: #aaa;
+                    }
+                }
+            }
+            
+        }
+    } 
+}
